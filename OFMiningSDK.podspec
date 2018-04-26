@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "OFMiningSDK"
-  s.version      = "0.0.1"
-  s.summary      = "OFBank Mining SDK V0.0.1"
+  s.version      = "0.0.2"
+  s.summary      = "OFBank Mining SDK V0.0.2"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,11 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                   A longer description of OFMiningSDK in Markdown format.
+                   * Think: Why did you write this? What is the focus? What does it do?
+                   * CocoaPods will be using this to generate tags, and improve search results.
+                   * Try to keep it short, snappy and to the point.
+                   * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
   s.homepage     = "http://www.ofbank.com/"
@@ -89,7 +94,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "OFMiningSDK", "OFMining/OFMiningSDK.framework/**/*.h"
+  # s.source_files  = "OFMiningSDK", "OFMining/OFMiningSDK.framework/**/*.h"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -117,7 +122,7 @@ Pod::Spec.new do |s|
 
   s.vendored_frameworks = 'OFMining/OFMiningSDK.framework'
   # s.framework  = "SomeFramework"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  s.frameworks = "SystemConfiguration"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
