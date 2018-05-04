@@ -16,10 +16,10 @@
 /**
  *    Mining SDK 初始化
  *
- *    @param appId     appId
- *    @param secret    secret
+ *    @param appCode    appCode
+ *    @param security   security
  */
-+ (void)startWithAppId:(NSString *)appId appSecret:(NSString *)secret;
++ (void)startWithAppCode:(NSString *)appCode security:(NSString *)security;
 
 /**
  *    打开调试日志
@@ -96,6 +96,19 @@
                                  count:(NSString *)count
                                success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
                                failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
+
+/**
+ *    提现到指定地址
+ *
+ *    @param walletAddress      提现地址
+ *    @param coinNum            提现金额
+ *    @param success            获取记录成功回调
+ *    @param failure            获取记录失败回调
+ */
++ (void)withdrawCashWithWalletAddress:(NSString *)walletAddress
+                              coinNum:(NSString *)coinNum
+                              success:(nullable void (^)(NSURLSessionDataTask *task, id _Nullable responseObject))success
+                              failure:(nullable void (^)(NSURLSessionDataTask * _Nullable task, NSError *error))failure;
 
 @end
 
